@@ -3,7 +3,7 @@ from unittest.mock import patch
 import requests
 import pandas as pd
 from io import StringIO
-import script  # Remplacez par le nom du fichier contenant votre script refactorisé
+import script  
 
 class TestFootballDataScript(unittest.TestCase):
 
@@ -41,7 +41,6 @@ class TestFootballDataScript(unittest.TestCase):
         df = pd.DataFrame(data)
         team_stats = script.calculate_kpis(df)
 
-        # Utilisation de StringIO pour générer la sortie attendue
         expected_output = StringIO("""season,team,games_played,goals_for,goals_against,wins,draws,losses
 2020,Team A,3,6,2,2,1,0
 """)
